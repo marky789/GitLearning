@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050506" />
+  <title>Moment — 时钟</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Moment 首页">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Moment</span>
+    </a>
+    <button class="sound-toggle" type="button" aria-pressed="false" aria-label="切换整点提示音">
+      <span class="sound-dot"></span>
+      <span class="sound-label">静音</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="clock-stage" aria-label="当前时间">
+      <p class="eyebrow">LOCAL TIME · <span id="timezone">SHANGHAI</span></p>
+      <div class="clock-wrap" id="clock-wrap">
+        <div class="clock" id="clock">
+          <div class="shine"></div>
+          <div class="ticks" aria-hidden="true"></div>
+          <div class="hand hour" id="hour-hand"></div>
+          <div class="hand minute" id="minute-hand"></div>
+          <div class="hand second" id="second-hand"></div>
+          <div class="pin"></div>
+        </div>
+      </div>
+      <div class="digital" aria-live="polite">
+        <span id="digital-time">00:00</span><span id="seconds">00</span>
+      </div>
+      <p class="date" id="date">正在载入日期</p>
+    </section>
+
+    <section class="world" aria-labelledby="world-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">AROUND THE WORLD</p>
+          <h2 id="world-title">此刻，世界各地。</h2>
+        </div>
+        <p>同一个瞬间，不同的光。</p>
+      </div>
+      <div class="city-list" id="city-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Moment</span>
+    <span>时间，安静地流动。</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
